@@ -98,7 +98,7 @@ poetry install
 Execute all tests with the following command (add `-v` for verbose output):
 
 ```sh
-pytest
+poetry run pytest
 ```
 
 ## Reference material
