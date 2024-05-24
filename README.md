@@ -48,6 +48,21 @@ PyTest Proficiency: Best Practices for Crafting Effective Tests
   many plugins available, such as `pytest-django` for testing Django applications. This extensibility ensures that
   PyTest can be tailored to meet the specific needs of your project, enhancing its functionality and adaptability.
 
+## PyTest Concepts
+
+- **Class-Based Tests**
+    - Utilize classes to group related tests, promoting code organization and reusability.
+
+- **Fixtures**
+    - Implement reusable setup and teardown code for tests, enhancing efficiency and maintainability.
+
+- **Mark and Parameterize**
+    - Use markers to categorize tests and `parametrize` to run a test with multiple sets of data, increasing test
+      coverage with minimal code duplication.
+
+- **Mocking**
+    - Simulate dependencies and isolate units of code for testing, ensuring tests remain independent and focused.
+
 ## Up and Running
 
 This project requires Python 3.10 or higher.
