@@ -55,3 +55,8 @@ jobs:
         run: |
           source .venv/bin/activate
           poetry run pytest -v
+      #----------------------------------------------
+      #              run linter
+      #----------------------------------------------
+      - name: Run linter
+          run: pylint $(git ls-files '*.py')
