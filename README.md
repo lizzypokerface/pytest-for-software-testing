@@ -9,9 +9,10 @@ PyTest Proficiency: Best Practices for Crafting Effective Tests
   rich set of functionalities that help developers write robust test cases with minimal effort.
 
 - **Auto-discovery of Tests**
-  PyTest can automatically discover test files and test functions based on their naming conventions (e.g., files
-  starting with `test_` or ending with `_test`). This means you don't need to explicitly register your tests or maintain
-  a test registry. It simplifies test execution by allowing you to run all tests in your project with a single command.
+  PyTest can automatically discover test files and test functions based on their naming conventions (e.g., PyTest
+  requires that your files be prefixed with `test_`, and all test classes should start with `Test`). This means you
+  don't need to explicitly register your tests or maintain a test registry. It simplifies test execution by allowing you
+  to run all tests in your project with a single command.
 
 - **Rich Assertion Introspection**
   When a test fails in PyTest, it provides a detailed and clear breakdown of why it failed. This includes the values
