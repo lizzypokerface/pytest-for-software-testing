@@ -59,4 +59,5 @@ jobs:
       #              run linter
       #----------------------------------------------
       - name: Run linter
-          run: pylint $(git ls-files '*.py')
+          run: |
+            poetry run pylint $(git ls-files '*.py')
