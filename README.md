@@ -63,6 +63,7 @@ PyTest Proficiency: Best Practices for Crafting Effective Tests
 
 - **Mocking**
     - Simulate dependencies and isolate units of code for testing, ensuring tests remain independent and focused.
+    - For a list of other techniques used in software testing, see appendix.
 
 ## Up and Running
 
@@ -99,3 +100,63 @@ Execute all tests with the following command (add `-v` for verbose output):
 ```sh
 pytest
 ```
+
+## Reference material
+
+* [Full pytest documentation](https://docs.pytest.org/en/7.4.x/contents.html)
+
+## Appendix
+
+### Other techniques used in software testing
+
+1. **Mocking**
+    - **Description**: Creating mock objects that mimic the behavior of real objects in controlled ways. Used to isolate
+      and test specific pieces of code.
+
+2. **Stubbing**
+    - **Description**: Providing pre-defined responses to method calls. Stubs do not simulate the full behavior of real
+      objects but return specific results needed for the test.
+
+3. **Faking**
+    - **Description**: Implementing simpler versions of real objects that work like the real ones but are simpler and
+      faster. Fakes often have the same API but with a limited set of functionalities.
+
+4. **Spying**
+    - **Description**: Similar to mocks, but in addition to mimicking the behavior, spies also record information about
+      how they were used (e.g., which methods were called and with what arguments).
+
+5. **Shims**
+    - **Description**: A shim is a piece of code that intercepts calls and can modify behavior. Shims can be used to
+      adapt code without modifying the original source.
+
+6. **Sandboxes**
+    - **Description**: Creating a controlled environment where tests can run isolated from the real environment. This is
+      useful for testing code that interacts with external systems.
+
+7. **Service Virtualization**
+    - **Description**: Simulating the behavior of dependent systems that are not readily available or are difficult to
+      access during testing. Service virtualization can mimic APIs, databases, or other services.
+
+8. **Dependency Injection**
+    - **Description**: A design pattern where an object receives its dependencies from an external source rather than
+      creating them itself. This allows for easy replacement of dependencies with mocks or stubs during testing.
+
+9. **Test Doubles**
+    - **Description**: General term for any kind of pretend object used in place of a real object for testing purposes.
+      This includes mocks, stubs, fakes, and spies.
+
+10. **Emulators**
+    - **Description**: Software that replicates the behavior of a specific environment or hardware. Emulators are often
+      used in testing applications meant to run on different platforms or devices.
+
+11. **Simulators**
+    - **Description**: Similar to emulators, but simulators recreate only the essential aspects of an environment or
+      system, often at a higher level. Simulators are used when detailed replication is not necessary.
+
+12. **In-Memory Testing**
+    - **Description**: Testing using in-memory databases or other in-memory data structures to avoid the overhead of
+      real database operations. This technique is often used to speed up tests and make them more predictable.
+
+Each of these techniques helps isolate and test specific parts of a system, making it easier to write reliable and
+maintainable tests. The choice of technique often depends on the particular requirements and constraints of the project
+being tested.
