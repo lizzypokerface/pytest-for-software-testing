@@ -1,4 +1,4 @@
-name: CI
+name: Lint
 
 # https://github.com/marketplace/actions/install-poetry-action
 
@@ -49,9 +49,8 @@ jobs:
       - name: Install project
         run: poetry install --no-interaction
       #----------------------------------------------
-      #              run test suite
+      #              run linter
       #----------------------------------------------
-      - name: Run tests
+      - name: Run linter
         run: |
-          source .venv/bin/activate
-          poetry run pytest -v
+          poetry run pylint $(git ls-files '*.py')
