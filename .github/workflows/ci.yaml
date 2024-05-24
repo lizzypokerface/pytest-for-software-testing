@@ -1,12 +1,7 @@
-name: Unit Tests
-
-# https://stackoverflow.com/questions/77446605/running-python-poetry-unit-test-in-github-actions
+name: test
 
 on:
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   test:
