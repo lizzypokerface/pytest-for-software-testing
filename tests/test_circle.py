@@ -22,3 +22,12 @@ class TestCircle:
 
     def test_perimeter(self):
         assert self.circle.perimeter() == (2 * math.pi * 10)
+
+    def test_equals(self, circle):
+        assert self.circle == circle
+
+    def test_dimensions_not_equals(self, rectangle):
+        assert self.circle != Circle(5)
+
+    def test_instance_not_equals(self, rectangle):
+        assert self.circle != rectangle
