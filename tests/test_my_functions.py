@@ -1,3 +1,5 @@
+import time
+
 import pytest
 
 import source.my_functions as my_functions
@@ -21,3 +23,22 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         my_functions.divide(10, 0)
+
+
+@pytest.mark.slow
+def test_very_slow():
+    time.sleep(2)
+    result = my_functions.divide(10, 5)
+    assert result == 2
+
+
+@pytest.mark.skip(reason="This feature is currently broken")
+def test_multiply_broken():
+    result = my_functions.multiply(5, 4)
+    assert result == 20
+
+
+@pytest.mark.xfail(reason="We know we cannot divide by zero")
+def test_divide_zero_broken():
+    result = my_functions.divide(10, 0)
+    assert result == '?'
