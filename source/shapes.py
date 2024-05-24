@@ -44,3 +44,19 @@ class Rectangle(Shape):
 
     def perimeter(self):
         return (self.length * 2) + (self.width * 2)
+
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+
+    def __eq__(self, other):
+        if not isinstance(other, Square):
+            return False
+        return (self.length == other.length)
+
+    def area(self):
+        return self.length ** 2
+
+    def perimeter(self):
+        return self.length * 4
