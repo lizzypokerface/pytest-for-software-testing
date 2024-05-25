@@ -63,7 +63,9 @@ PyTest Proficiency: Best Practices for Crafting Effective Tests
 
 - **Mocking**
     - Simulate dependencies and isolate units of code for testing, ensuring tests remain independent and focused.
-    - For a list of other techniques used in software testing, see appendix.
+    - Use mocking when tests depend on external programs that cannot guarantee the same result each time (e.g., database
+      queries or API calls that may yield different outcomes).
+    - For a list of other techniques used in software testing, see the appendix.
 
 ## Up and Running
 
@@ -104,6 +106,7 @@ poetry run pytest
 ## Reference material
 
 * [Full pytest documentation](https://docs.pytest.org/en/7.4.x/contents.html)
+* [unittest.mock](https://docs.python.org/3/library/unittest.mock.html)
 
 ## Appendix
 
