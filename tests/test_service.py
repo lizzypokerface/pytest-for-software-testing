@@ -7,7 +7,6 @@ import source.service as service
 
 
 # https://docs.python.org/3/library/unittest.mock.html
-# Use mocking when tests are dependednt on external programs that cannot guarantee the same result each time
 
 @mock.patch("source.service.get_user_from_db")
 def test_get_user_from_db(mock_get_user_from_db):
